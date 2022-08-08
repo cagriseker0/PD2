@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int i,sayi,toplam;
+	toplam=0;
+	int oyuncu_puan=0;
+	srand(time(NULL));
+	
+	for (i=0;i<2;i++){
+		sayi=rand() %6 +1;
+		toplam+=sayi;
+		printf("%d\t",sayi);
+	}
+	printf("Zarlarin toplami: %d\n",toplam);
+	if (toplam==7||toplam==11){
+		printf("oyuncu kazandi");
+	}
+	if (toplam==2||toplam==3||toplam==12){
+		printf("oyuncu kaybetti.");
+	}
+	else{
+		printf("Oyuncunun puani %d",toplam);
+	}
+	
+	return 0;
+}
