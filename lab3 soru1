@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int topla(int n){
+	if (n==0){
+		return;
+	}
+	else {
+		return (n+(topla(n-1)));
+	}
+}
+
+int main(int argc, char *argv[]) {
+	int sayi;
+	printf("sayiyi gir: ");
+	scanf("%d",&sayi);
+	printf("%d",topla(sayi));
+	
+	
+	return 0;
+}
+
