@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int obeb(int x,int y){
+	if (y==0){
+		return x;
+	}
+	return obeb(y,x%y);
+}
+
+
+int main(int argc, char *argv[]) {
+	printf("%d",obeb(180,48));
+	
+	return 0;
+}
