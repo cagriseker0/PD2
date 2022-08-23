@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	char str[100];
+	int *pstr;
+	int i=0;
+	pstr=&i;
+	
+	printf("String elemanlarini giriniz : ");
+ 	gets(str);
+
+  	while (str[i] != '\0')
+    i++;
+
+  printf("\nStringin uzunlugu: %d", *pstr);
+	
+	return 0;
+}
